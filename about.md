@@ -4,11 +4,7 @@ title: About
 permalink: /about/
 ---
 
-My name is Vishal Jhaveri and I am a Software Engineer. This site is about my journey as I grow as a developer and what skills I learn along the way.
-
-### More Information
-
-
+My name is Vishal Jhaveri and I am a Software Engineer. This site is about my journey as as a developer. 
 
 ### Contact me
 
