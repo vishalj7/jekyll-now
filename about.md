@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+My name is Vishal Jhaveri and I am a Software Engineer. This site is about my journey as I grow as a developer and what skills I learn along the way.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[Email Address](mailto:vishal_7@hotmail.co.uk)
