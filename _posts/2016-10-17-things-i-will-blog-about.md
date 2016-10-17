@@ -1,7 +1,9 @@
 
-layout	title
-post   
-Things I will Blog about
+---
+layout: post
+title: Things I will Blog about
+---  
+
 
 
 Hi All, its been a while since I have written a blog but I have been super busy with my apprenticeship and finishing off my course, which is now all complete Yay!!
