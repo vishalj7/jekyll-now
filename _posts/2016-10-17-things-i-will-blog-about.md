@@ -1,8 +1,7 @@
-
 ---
 layout: post
-title: Things I will Blog about
----  
+title: The things I will blog about
+---
 
 
 
