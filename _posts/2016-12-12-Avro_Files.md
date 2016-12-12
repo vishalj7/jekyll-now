@@ -16,7 +16,7 @@ Data serialisation is a way of translating data into binary form so that it can 
 
 Avro utilises a compact binary data format which can be compressed and this results in a fast serialisation times. 
 
-#####Note – that serialising the number ‘108125150’ as an int type takes up 4 bytes where storing it as a string will take up 9 bytes.
+##### Note – that serialising the number ‘108125150’ as an int type takes up 4 bytes where storing it as a string will take up 9 bytes.
 
 ### Avro schema
 
