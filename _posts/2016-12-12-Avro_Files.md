@@ -25,29 +25,29 @@ Avro schemas are represented in JSON format and there are two Avro data types; S
 #### Simple – contains only one value
 
 
-| Avro  |  Java Equivalent |  
-|---|---|
-| null  |  null |  
+| Avro  | Java Equivalent |  
+|---|---:|
+| null  | null |  
 | boolean  | boolean  |  
-| int  |  int |  
+| int  | int |  
 | long | long |
 | float | float |
 | double | double |
 | bytes | java.nio.ByteBuffer |
-| string | 	java.lang.CharSequence |
+| string | java.lang.CharSequence |
 
 
 
 #### Complex
 
 |Name	|Description|
-|---|---|
-|record|A user-defined type composed of one or more named fields|
-|enum	| A specific set of values |
+|---|---:|
+|record | A user-defined type composed of one or more named fields|
+|enum | A specific set of values |
 |array | Zero or more values of the same data type |
-|map	| Set of key-value pairs; key is of string data type and value is specified data type |
-|union	|Exactly one value matching a specified set of types |
-|fixed |	A fixed number of 8-bit unsigned bytes |
+|map | Set of key-value pairs; key is of string data type and value is specified data type |
+|union | Exactly one value matching a specified set of types |
+|fixed | A fixed number of 8-bit unsigned bytes |
 
 
 
