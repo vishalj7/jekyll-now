@@ -2,9 +2,7 @@
 layout: post
 title: Avro Files
 ---
-
 ### What is Avro?
-
 Avro is an efficient data serialisation framework and a RPC (Remote Procedural Calls) library. You can read and write data in Java, C, C++, C#, Python, PHP and other languages and then the data is serialised it uses a highly-optimised binary encoding. Avro specifies rules for schema evolution over time.
 
 An Avro Container File is made up of the data and the schema for the data making it self-describing so this means it is easy for programs to dynamically understand the information stored in the Avro file. This makes the Avro file very portable as any program just needs to read and understand the schema to access/read the data. 
@@ -22,6 +20,7 @@ Note – that serialising the number ‘108125150’ as an int type takes up 4 b
 Avro schemas are represented in JSON format and there are two Avro data types; Simple and Complex.
 
 #### Simple – contains only one value
+
 
 | Avro  |  Java Equivalent |  
 |---|---|
@@ -74,6 +73,7 @@ Below is an example of an Avro schema.
 ```
 Avro supports setting default values in the schema.
 
+
 Default example
 ```json
 {
@@ -87,6 +87,7 @@ Default example
     ]
 }
 ```
+
 Avro checks for null values when serialising the data and null values are only allowed when they have been specified in the schema. If you are using a default, the type must be listed first in the union. 
 
 Null example
@@ -126,6 +127,7 @@ Schemas of data will of course change and Avro supports these changes. The schem
 If there is a need for the schema to change we can write the new data using a new schema but the problem with that is applications would not be able to read the old data. 
 
 With changes to column names you can need to use “aliases” and reference the old column name. So that the old and new data can be read using this one schema. 
+
 ```json
 {
 …
@@ -136,6 +138,7 @@ With changes to column names you can need to use “aliases” and reference the
 ```
 
 Where new fields are added, there is no previous data for the column so we need to state the default value where one doesn’t currently exist. 
+
 ```json
 {
 …
@@ -166,6 +169,7 @@ The changes below would affect the application ability to use the old schema to 
 
 
 ### Avro Tool 
+
 
 The Avro Tool allows you to examine an Avro files as it allows you to read the schema or the data and each Avro release contains an Avro Tools JAR file. If you want to read the data, you need to use ‘tojson’ and use ‘getschema’ to read the schema.
 When using Avro “specific” records, you need first generate the Java code and one way to do this is to use the Avro Tool JAR file. You need to make sure that the output directory must already exist and that you generate the code to its own directory. 
