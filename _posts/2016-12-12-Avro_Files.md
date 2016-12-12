@@ -4,6 +4,7 @@ title: Avro Files
 tags: 
 - Avro
 ---
+
 ### What is Avro?
 Avro is an efficient data serialisation framework and a RPC (Remote Procedural Calls) library. You can read and write data in Java, C, C++, C#, Python, PHP and other languages and then the data is serialised it uses a highly-optimised binary encoding. Avro specifies rules for schema evolution over time.
 
@@ -15,7 +16,7 @@ Data serialisation is a way of translating data into binary form so that it can 
 
 Avro utilises a compact binary data format which can be compressed and this results in a fast serialisation times. 
 
-Note – that serialising the number ‘108125150’ as an int type takes up 4 bytes where storing it as a string will take up 9 bytes.
+#####Note – that serialising the number ‘108125150’ as an int type takes up 4 bytes where storing it as a string will take up 9 bytes.
 
 ### Avro schema
 
