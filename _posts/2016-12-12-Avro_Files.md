@@ -111,7 +111,8 @@ You can also use the ‘doc’ to give a description about that type and this wo
 {
 …
 "fields":[
-            {"name": "Name", "type":"string", "doc":"Name of the user"},
+            {"name": "Name", "type":"string", 
+            "doc":"Name of the user"},
 …
 }
 ```
@@ -132,7 +133,8 @@ With changes to column names you can need to use “aliases” and reference the
 {
 …
 "fields":[
-            {"name": "User_Name", "type":"string", "doc":"Name of the user", "aliases":["Name"] },
+            {"name": "User_Name", "type":"string", 
+            "doc":"Name of the user", "aliases":["Name"] },
 …
 }
 ```
@@ -143,8 +145,10 @@ Where new fields are added, there is no previous data for the column so we need 
 {
 …
 "fields":[
-            {"name": "User_Name", "type":"string", "doc":"Name of the user"},
-            {"name":"Email", "type": ["null", "string"], "default":"null"},
+            {"name": "User_Name", "type":"string", 
+            "doc":"Name of the user"},
+            {"name":"Email", "type": ["null", "string"], 
+            "default":"null"},
 …
 }
 ```
