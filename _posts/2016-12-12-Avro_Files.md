@@ -53,6 +53,7 @@ Avro schemas are represented in JSON format and there are two Avro data types; S
 
 The Avro schema is just a way to define the Avro data and it has its own standards of defining a schema which are stated below.
 
+
 + Namespace – name of the namespace in which the object resides
 + Type – the document type (default is record)
 + Name – the schema name
@@ -77,8 +78,8 @@ Below is an example of an Avro schema.
 ```
 
 Avro supports setting default values in the schema.
-
-
+   
+   
 Default example
 
 ```json
@@ -93,9 +94,11 @@ Default example
     ]
 }
 ```
-
+    
+    
 Avro checks for null values when serialising the data and null values are only allowed when they have been specified in the schema. If you are using a default, the type must be listed first in the union. 
-
+    
+    
 Null example
 
 ```json
@@ -112,7 +115,8 @@ Null example
     ]
 }
 ```
-
+    
+    
 You can also use the ‘doc’ to give a description about that type and this works for every types.
 
 ```json
@@ -127,7 +131,10 @@ You can also use the ‘doc’ to give a description about that type and this wo
 
 ### Avro supports compression 
 
-
+   
+   
+   
+   
 
 ### Avro Schema Evolution
 
@@ -160,7 +167,8 @@ Where new fields are added, there is no previous data for the column so we need 
 …
 }
 ```
-
+   
+   
 If you change an Avro file’s schema the changes below will not affect any application reading the file using the old Avro schema:
 
 + Adding, changing or removing the "doc" attribute.
@@ -170,7 +178,8 @@ If you change an Avro file’s schema the changes below will not affect any appl
 + Promoting a field to a wider data type (eg, int to long)
 + Removing a field with a default value
 
-
+    
+    
 The changes below would affect the application ability to use the old schema to read the old data if changes are made to the schema:
 
 + Creating a new field without a default value
@@ -179,10 +188,13 @@ The changes below would affect the application ability to use the old schema to 
 + Removing a symbol from an enum
 + Removing a type from a union
 
-
+    
+    
 ### Avro Tool 
 
-
+    
+    
 The Avro Tool allows you to examine an Avro files as it allows you to read the schema or the data and each Avro release contains an Avro Tools JAR file. If you want to read the data, you need to use ‘tojson’ and use ‘getschema’ to read the schema.
+    
 When using Avro “specific” records, you need first generate the Java code and one way to do this is to use the Avro Tool JAR file. You need to make sure that the output directory must already exist and that you generate the code to its own directory. 
 
