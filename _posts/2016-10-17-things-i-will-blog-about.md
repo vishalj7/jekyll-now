@@ -15,6 +15,9 @@ Below are the blogs that i want to talk about/explain how to use in more detail,
 + Rstudio
 + Pentaho
 + Hadoop-talk about read/write file processing, yarn
++ Sqoop
++ Flume
++ Kafka
 + Hive
 + Impala
 + Spark
