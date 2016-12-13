@@ -28,13 +28,13 @@ Avro schemas are represented in JSON format and there are two Avro data types; S
 | Avro  | Java Equivalent |  
 |---|:---:|
 | null  | null |  
-| boolean  | boolean  |  
-| int  | int |  
-| long | long |
+| boolean   | boolean  |  
+| int   | int |  
+| long  | long |
 | float | float |
-| double | double |
+| double    | double |
 | bytes | java.nio.ByteBuffer |
-| string | java.lang.CharSequence |
+| string    | java.lang.CharSequence |
 
 
 
