@@ -25,16 +25,16 @@ Avro schemas are represented in JSON format and there are two Avro data types; S
 #### Simple – contains only one value
 
 
-| Avro  | Java Equivalent |  
+|Avro  |Java Equivalent |  
 |---|---:|
-| null  | null |  
-| boolean  | boolean  |  
-| int  | int |  
-| long | long |
-| float | float |
-| double | double |
-| bytes | java.nio.ByteBuffer |
-| string | java.lang.CharSequence |
+|null  |null |  
+|boolean  |boolean  |  
+|int  |int |  
+|long |long |
+|float |float |
+|double |double |
+|bytes |java.nio.ByteBuffer |
+|string |java.lang.CharSequence |
 
 
 
@@ -42,12 +42,12 @@ Avro schemas are represented in JSON format and there are two Avro data types; S
 
 |Name	|Description|
 |---|---:|
-|record | A user-defined type composed of one or more named fields|
-|enum | A specific set of values |
-|array | Zero or more values of the same data type |
-|map | Set of key-value pairs; key is of string data type and value is specified data type |
-|union | Exactly one value matching a specified set of types |
-|fixed | A fixed number of 8-bit unsigned bytes |
+|record |A user-defined type composed of one or more named fields|
+|enum |A specific set of values |
+|array |Zero or more values of the same data type |
+|map |Set of key-value pairs; key is of string data type and value is specified data type |
+|union |Exactly one value matching a specified set of types |
+|fixed |A fixed number of 8-bit unsigned bytes |
 
 
 
