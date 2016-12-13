@@ -26,7 +26,7 @@ Avro schemas are represented in JSON format and there are two Avro data types; S
 
 
 |Avro  |Java Equivalent |  
-|---|---:|
+|---|:---|
 |null  |null |  
 |boolean  |boolean  |  
 |int  |int |  
@@ -41,7 +41,7 @@ Avro schemas are represented in JSON format and there are two Avro data types; S
 #### Complex
 
 |Name	|Description|
-|---|---:|
+|---|:---|
 |record |A user-defined type composed of one or more named fields|
 |enum |A specific set of values |
 |array |Zero or more values of the same data type |
