@@ -5,12 +5,12 @@ tags:
 - Avro
 ---
 
-  ### What is Avro?
+### What is Avro?
 Avro is an efficient data serialisation framework and a RPC (Remote Procedural Calls) library. You can read and write data in Java, C, C++, C#, Python, PHP and other languages and then the data is serialised it uses a highly-optimised binary encoding. Avro specifies rules for schema evolution over time.
 
 An Avro Container File is made up of the data and the schema for the data making it self-describing so this means it is easy for programs to dynamically understand the information stored in the Avro file. This makes the Avro file very portable as any program just needs to read and understand the schema to access/read the data. 
 
- ### What is data serialisation?
+### What is data serialisation?
 
 Data serialisation is a way of translating data into binary form so that it can be sent across the network or to store the translated data to disk. Where deserialisation is where data in binary format is translated into actual data rather than a binary format.
 
@@ -18,11 +18,11 @@ Avro utilises a compact binary data format which can be compressed and this resu
 
 ##### Note – that serialising the number ‘108125150’ as an int type takes up 4 bytes where storing it as a string will take up 9 bytes.
 
- ### Avro schema
+### Avro schema
 
 Avro schemas are represented in JSON format and there are two Avro data types; Simple and Complex.
 
- #### Simple – contains only one value
+#### Simple – contains only one value
 
 
 |Avro  |Java Equivalent |  
@@ -38,7 +38,7 @@ Avro schemas are represented in JSON format and there are two Avro data types; S
 
 
 
- #### Complex
+#### Complex
 
 |Name	|Description|
 |---|:---:|
@@ -125,11 +125,11 @@ You can also use the ‘doc’ to give a description about that type and this wo
 }
 ```
 
- ### Avro supports compression 
+### Avro supports compression 
 
 
 
- ### Avro Schema Evolution
+### Avro Schema Evolution
 
 Schemas of data will of course change and Avro supports these changes. The schema used to write the data is contained within the file and therefore when reading the data the schema is used to define the structure of the data.
 
@@ -180,7 +180,7 @@ The changes below would affect the application ability to use the old schema to 
 + Removing a type from a union
 
 
- ### Avro Tool 
+### Avro Tool 
 
 
 The Avro Tool allows you to examine an Avro files as it allows you to read the schema or the data and each Avro release contains an Avro Tools JAR file. If you want to read the data, you need to use ‘tojson’ and use ‘getschema’ to read the schema.
