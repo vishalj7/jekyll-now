@@ -116,6 +116,15 @@ table {
     border: 2px solid #000000;
 }
 
+tbody {
+    margin: 0;
+    padding: 1px;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: initial;
+}
+
 th {
     border: 1px solid #000000;
 }
