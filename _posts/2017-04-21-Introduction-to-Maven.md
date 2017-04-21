@@ -119,7 +119,7 @@ example
 ### Maven Build Lifecycles, Phases and goals
 
 
-Maven has 3 main build lifecycles default, clean and site. Each one of these build lifecycles looks after different parts of builing the software project and each build lifecycle is executed independently of each other but they can be executed together but they will be executed in sequence. 
+Maven has 3 main build lifecycles default, clean and site. Each one of these build lifecycles looks after different parts of building the software project and each build lifecycle is executed independently of each other but they can be executed together but they will be executed in sequence. 
 
 + Default - handles everything related to compiling and packaging you project
 + Clean - handles everything related to removing temporary files souch as previous JARs, compiled classe etc
