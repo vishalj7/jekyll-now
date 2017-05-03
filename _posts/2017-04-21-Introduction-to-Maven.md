@@ -3,7 +3,7 @@ layout: post
 title: Introduction to Maven
 ---
 
-### What is Maven
+### What is Maven?
 
 Maven is a build, complier, tester tool for Java projects, it can also be used with Scala.
 
