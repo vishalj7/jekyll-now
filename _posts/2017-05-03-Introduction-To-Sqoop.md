@@ -4,7 +4,6 @@ title: Introduction to Sqoop
 ---
 
 ### What is Sqoop?
-
 Sqoop is an application that allows you to connect to a database like Oracle, MySQL to HDFS. It can import a single table, all tables or a partial table into HDFS. The data can be imported in a delimited text, SequenceFile or an Avro format. Sqoop can also export data from HDFS to a database.
 
 Sqoop uses MapReduce to import and export data into and out of HDFS which provides parallel operation as well as fault tolerance. Sqoop will read the table row by row into HDFS and the output of this input process is a set of files containing the data that was imported. As Sqoop uses MapReduce to perform this operation the output will be multiple files.
