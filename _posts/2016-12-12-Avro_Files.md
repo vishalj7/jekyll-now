@@ -192,9 +192,68 @@ The changes below would affect the application ability to use the old schema to 
     
 ### Avro Tool 
 
-    
-    
 The Avro Tool allows you to examine an Avro files as it allows you to read the schema or the data and each Avro release contains an Avro Tools JAR file. If you want to read the data, you need to use ‘tojson’ and use ‘getschema’ to read the schema.
+
+```
+hdfs dfs -copyToLocal avro_test/products/part-m-00000.avro avro_data_files
+
+
+$ avro-tools tojson part-m-00000.avro
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.lib.MutableMetricsFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+{"product_id":{"int":1},"product_category_id":{"int":2},"product_name":{"string":"Quest Q64 10 FT. x 10 FT. Slant Leg Instant U"},"product_description":{"string":""},"product_price":{"float":59.98},"product_image":{"string":"http://images.acmesports.sports/Quest+Q64+10+FT.+x+10+FT.+Slant+Leg+Instant+Up+Canopy"}}
+{"product_id":{"int":2},"product_category_id":{"int":2},"product_name":{"string":"Under Armour Men's Highlight MC Football Clea"},"product_description":{"string":""},"product_price":{"float":129.99},"product_image":{"string":"http://images.acmesports.sports/Under+Armour+Men%27s+Highlight+MC+Football+Cleat"}}
+
+$ avro-tools getschema part-m-00000.avro
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.lib.MutableMetricsFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+{
+  "type" : "record",
+  "name" : "products",
+  "doc" : "Sqoop import of products",
+  "fields" : [ {
+    "name" : "product_id",
+    "type" : [ "null", "int" ],
+    "default" : null,
+    "columnName" : "product_id",
+    "sqlType" : "4"
+  }, {
+    "name" : "product_category_id",
+    "type" : [ "null", "int" ],
+    "default" : null,
+    "columnName" : "product_category_id",
+    "sqlType" : "4"
+  }, {
+    "name" : "product_name",
+    "type" : [ "null", "string" ],
+    "default" : null,
+    "columnName" : "product_name",
+    "sqlType" : "12"
+  }, {
+    "name" : "product_description",
+    "type" : [ "null", "string" ],
+    "default" : null,
+    "columnName" : "product_description",
+    "sqlType" : "12"
+  }, {
+    "name" : "product_price",
+    "type" : [ "null", "float" ],
+    "default" : null,
+    "columnName" : "product_price",
+    "sqlType" : "7"
+  }, {
+    "name" : "product_image",
+    "type" : [ "null", "string" ],
+    "default" : null,
+    "columnName" : "product_image",
+    "sqlType" : "12"
+  } ],
+  "tableName" : "products"
+}
+
+```
     
 When using Avro “specific” records, you need first generate the Java code and one way to do this is to use the Avro Tool JAR file. You need to make sure that the output directory must already exist and that you generate the code to its own directory. 
 
