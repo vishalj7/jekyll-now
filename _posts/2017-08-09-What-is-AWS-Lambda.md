@@ -5,7 +5,6 @@ title: What is AWS Lambda?
 
 
 ### What is AWS Lambda?
-
 It is a function in the AWS suite of tools which allows you to run code without setting up and running servers. You can set up AWS Lambda to excute your code when you want based on a event or schedule it. AWS Lambda supports a number of languages such as Java, Python, C# and Node.js.
 
 
