@@ -1,7 +1,9 @@
 ---
-layout:post
+layout: post
 title: Blog Update
 ---
+
+
 
 ### It's been a while!!!
 
