@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Introduction to Sqoop
+tags: Hadoop Sqoop
 ---
 
 ### What is Sqoop?

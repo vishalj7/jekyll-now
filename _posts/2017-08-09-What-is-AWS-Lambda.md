@@ -1,6 +1,7 @@
 ---
 layout: post
 title: What is AWS Lambda?
+tags: AWS Lambda
 ---
 
 

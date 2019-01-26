@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Introduction to Maven
+tags: Java Maven
 ---
 
 ### What is Maven?

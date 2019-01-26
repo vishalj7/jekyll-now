@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Avro Files
-tags: 
-- Avro
+tags: Avro 
 ---
 
 ### What is Avro?

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Sqoop In More Detail
+tags: Hadoop Sqoop
 ---
 
 ### Sqoop In More Detail
