@@ -1,6 +1,6 @@
 ---
 layout: tagpage
-title: "Tag: Learning,"
-tag: Learning,
+title: "Tag: CNN"
+tag: CNN
 robots: noindex
 ---

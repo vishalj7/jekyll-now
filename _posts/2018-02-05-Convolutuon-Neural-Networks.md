@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Convolutional Neural Network
-tags: [Machine Learning, CNN, Image Recognition, Convolutional-Neural-Network]
+tags: Machine-Learning CNN Image-Recognition Convolutional-Neural-Network
 ---
 
 
