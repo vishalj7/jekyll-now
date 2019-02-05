@@ -1,13 +1,12 @@
 ---
 layout: post
 title: Convolutional Neural Network
-tags: Machine-Learning CNN Image-Recognition Convolutional-Neural-Network
+tags: [Machine Learning, CNN, Image Recognition, Convolutional-Neural-Network]
 ---
 
 
 
 ### Convolutional Neural Network
-
 
 #### What is Convolutional Neural Network (CNN)?
 
@@ -37,16 +36,18 @@ The blue grid is the input image and the green grid that is moving left to right
 This is one step in a 2D operation and realistically the input would be in 3D to include height, width and depth (depth of colour RBG). This is just using one filter to generate a feature map but in practice we will be using lots of different filters to generate lots of feature which are then put together to create the final output of this convolution layer. The depth of the kernel matches the depth of the input image so that everything from the input image is covered. 
 
 
+
 #### Non Linearity (ReLU)
 
 Rectified Linear Unit is considered as part of the convolution step and it is a type of activation function. The reason why we use this relu activation function is to increase non-linearity in the images. Images naturally contain a lot of non-linear features such as colour, borders and when we use pass the image through the convolution stage the image area selected can become linear as we are only working with a very small area and the chances of the same colour being present is high. So using the relu activiation function will increase the non-linearity as it removes all the black elements from it, keeping only those carrying a positive value.  
+
 
 
 #### Stride and Padding 
 
 This is not really a step but information The stride is a number that is used to specifiy how many pixels for the kernal to move by when the it finishes the calculations on the current set of pixels. The default is 1 and this usually involves the kernel overlapping and covering some pixels more than others. 
 
-![an image alt text]({{ site.baseurl }}/images/cnn_stride1.gif "Convolution step - Stride 1 moves across each pixel in the image.")
+![an image alt text]({{ site.baseurl }}/images/cnn_stride.gif "Convolution step - Stride 1 moves across each pixel in the image.")
 
 Now increasing the stride size, means less calculations and computation but also a smaller feature map so at each layer the feature map would be getting smaller. 
 
@@ -55,6 +56,7 @@ Now increasing the stride size, means less calculations and computation but also
 Padding is used by to keep the feature map (height and width) the same size as the input image by adding 0 values around the input image.  
 
 ![an image alt text]({{ site.baseurl }}/images/cnn_padding.gif "Convolution step - Padding allows the feature map to remain the same size.")
+
 
 
 #### Max Pooling 
@@ -76,6 +78,7 @@ In this step there are 3 main components:
 
 ![an image alt text]({{ site.baseurl }}/images/cnn_fully_connected.png "Fully Connected layer.")
 
+
 #### Input layer
 
 As mentioned above the input layer is the output from the convolution and pooling layer but as a 1D vector.
@@ -95,4 +98,4 @@ The final layer will contain a number of classifications based on your CNN and t
 
 Below is the full architecture that I talked about above:
 
-![an image alt text]({{ site.baseurl }}/images/cnn_architecture.png "The whole architecture end to end.") 
+![an image alt text]({{ site.baseurl }}/images/cnn_architecture.jpg "The whole architecture end to end.") 
