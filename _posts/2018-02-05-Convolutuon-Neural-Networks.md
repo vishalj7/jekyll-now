@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Convolutional Neural Network
-tags: "Machine Learning" CNN "Image Recognition" "Convolutional Neural Network"
+tags: Machine-Learning CNN Image-Recognition Convolutional-Neural-Network
 ---
+
+
 
 ### Convolutional Neural Network
 
@@ -91,6 +93,6 @@ The final layer will contain a number of classifications based on your CNN and t
 ![an image alt text]({{ site.baseurl }}/images/cnn_classification.png "Classification Layer")
 
 
-
+Below is the full architecture that I talked about above:
 
 ![an image alt text]({{ site.baseurl }}/images/cnn_architecture.png "The whole architecture end to end.") 
