@@ -43,7 +43,7 @@ Rectified Linear Unit is considered as part of the convolution step and it is a 
 
 #### Stride and Padding 
 
-This is not really a step but information The stride is a number that is used to specifiy how many pixels for the kernal to move by when the it finishes the calculations on the current set of pixels. The default is 1 and this usually involves the kernel overlapping and covering some pixels more than others. 
+This is not really a step but information. The stride is a number that is used to specifiy how many pixels for the kernal to move by when the it finishes the calculations on the current set of pixels. The default is 1 and this usually involves the kernel overlapping and covering some pixels more than others. 
 
 ![an image alt text]({{ site.baseurl }}/images/cnn_stride.gif "Convolution step - Stride 1 moves across each pixel in the image.")
 
@@ -70,9 +70,9 @@ The other reason why pooling is important is that no matter where the pattern yo
 This is the final step of creating a CNN and the outputs from the convolution and pooling layer is used as the inouts for this step but before they can be used they need to be flattened as the output of convolution and pooling layer are in 3D whereas the fully connected layer expects a 1D of vector numbers. Flattening converts the outputs from convolution and pooling layer conver the grid into a 1d list of vector numbers.  
 
 In this step there are 3 main components:
-    + Input layer 
-    + Fully Connected layer
-    + Output layer (Classification layer)
++ Input layer 
++ Fully Connected layer
++ Output layer (Classification layer)
 
 ![an image alt text]({{ site.baseurl }}/images/cnn_fully_connected.png "Fully Connected layer.")
 
@@ -89,7 +89,7 @@ From the above picture each circle is a neuron and each neuron in the previous l
 
 #### Classification layer
 
-The final layer will contain a number of classifications based on your CNN and the features detected will be passed to this layer. All the possible classes for this layer will return a probability that it contains that class e.g. that it is a dog or cat. 
+The final layer will contain a number of classifications based on your CNN and the features detected will be passed to this layer. This output layer contains a softmax activation function, which outputs a probability value from 0 to 1 for each of the classification labels the model is trying to predict.
 
 ![an image alt text]({{ site.baseurl }}/images/cnn_classification.png "Classification Layer")
 
