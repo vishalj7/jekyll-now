@@ -5,12 +5,10 @@ tags: Machine-Learning CNN Image-Recognition Convolutional-Neural-Network
 ---
 
 
-
 ### Convolutional Neural Network
+Convolutional Neural Network is a neural network which is primarily used for classifying images such as determining whether an object exists within the image. They have been used to identify road signs, people's faces and even determining handwriting. CNNs can be used in Natural Language Processing (NLP) and even speech recognition. 
 
 #### What is Convolutional Neural Network (CNN)?
-
-Convolutional Neural Network is a neural network which is primarily used for classifying images such as determining whether an object exists within the image. They have been used to identify road signs, people's faces and even determining handwriting. CNNs can be used in Natural Language Processing (NLP) and even speech recognition. 
 
 CNNs differ from ordinary neural networks as CNNs try to find patterns within the image and comparing this to an ordinary neural network which have features and when testing CNNs try to find the same pattern from the training set where as ordinary neural networks try to use the features. 
 
