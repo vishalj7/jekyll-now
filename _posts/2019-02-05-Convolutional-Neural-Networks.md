@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Convolutional Neural Network
+title: Understanding how Convolutional Neural Networks work
 tags: Machine-Learning CNN Image-Recognition Convolutional-Neural-Network
 ---
 
