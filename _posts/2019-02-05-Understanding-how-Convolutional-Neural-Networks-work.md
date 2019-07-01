@@ -31,14 +31,13 @@ A small convolution filter (a small grid) called the kernel moves from the left 
 
 The blue grid is the input image and the green grid that is moving left to right is the kernel and finally the dot product is calculated and then added to the feature map ( the grid on the right). 
 
-This is one step in a 2D operation and realistically the input would be in 3D to include height, width and depth (depth of colour RBG). This is just using one filter to generate a feature map but in practice we will be using lots of different filters to generate lots of feature which are then put together to create the final output of this convolution layer. The depth of the kernel matches the depth of the input image so that everything from the input image is covered. 
+This is one step in a 2D operation and realistically the input would be in 3D to include height, width and depth (depth of colour RBG). This is just using one filter to generate a feature map but in practice we will be using lots of different filters to generate lots of features which are then put together to create the final output of this convolution layer. The depth of the kernel matches the depth of the input image so that everything from the input image is covered. 
 
 
 
 #### Non Linearity (ReLU)
 
-Rectified Linear Unit is considered as part of the convolution step and it is a type of activation function. The reason why we use this relu activation function is to increase non-linearity in the images. Images naturally contain a lot of non-linear features such as colour, borders and when we use pass the image through the convolution stage the image area selected can become linear as we are only working with a very small area and the chances of the same colour being present is high. So using the relu activiation function will increase the non-linearity as it removes all the black elements from it, keeping only those carrying a positive value.  
-
+Rectified Linear Unit is considered as part of the convolution step and it is a type of activation function (another type is  sigmoid and both are non-linear). The primary benefit of ReLU is due to its characteristics in back-propagation and to increase non-linearity in the images. Images naturally contain a lot of non-linear features such as colour, borders and when we pass the image through the convolution stage the pixel area selected, can become linear as we are only working with a very small area and the chances of the same colour being present in this area is high. So using the ReLU activiation function will increase the non-linearity as it removes all the black elements from it, keeping only those carrying a positive value.  
 
 
 #### Stride and Padding 
