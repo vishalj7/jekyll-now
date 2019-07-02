@@ -8,6 +8,7 @@ tags: Machine-Learning CNN Image-Recognition Convolutional-Neural-Network
 ### Convolutional Neural Network
 Convolutional Neural Network is a neural network which is primarily used for classifying images such as determining whether an object exists within the image. They have been used to identify road signs, people's faces and even determining handwriting. CNNs can be used in Natural Language Processing (NLP) and even speech recognition. 
 
+
 #### What is Convolutional Neural Network (CNN)?
 
 CNNs differ from ordinary neural networks as CNNs try to find patterns within the image and comparing this to an ordinary neural network which have features and when testing CNNs try to find the same pattern from the training set where as ordinary neural networks try to use the features. 
@@ -46,9 +47,11 @@ This is not really a step but information. The stride is a number that is used t
 
 ![an image alt text]({{ site.baseurl }}/images/cnn_stride.gif "Convolution step - Stride 1 moves across each pixel in the image.")
 
+
 Now increasing the stride size, means less calculations and computation but also a smaller feature map so at each layer the feature map would be getting smaller. 
 
 ![an image alt text]({{ site.baseurl }}/images/cnn_stride2.gif "Convolution step - Stride 2 moves across each pixel in the image.")
+
 
 Padding is used by to keep the feature map (height and width) the same size as the input image by adding 0 values around the input image.  
 
@@ -73,6 +76,7 @@ In this step there are 3 main components:
 + Fully Connected layer
 + Output layer (Classification layer)
 
+
 ![an image alt text]({{ site.baseurl }}/images/cnn_fully_connected.png "Fully Connected layer.")
 
 
@@ -90,9 +94,12 @@ From the above picture each circle is a neuron and each neuron in the previous l
 
 The final layer will contain a number of classifications based on your CNN and the features detected will be passed to this layer. This output layer contains a softmax activation function, which outputs a probability value from 0 to 1 for each of the classification labels the model is trying to predict.
 
+
 ![an image alt text]({{ site.baseurl }}/images/cnn_classification.png "Classification Layer")
 
 
 Below is the full architecture that I talked about above:
 
 ![an image alt text]({{ site.baseurl }}/images/cnn_architecture.jpg "The whole architecture end to end.") 
+
+
