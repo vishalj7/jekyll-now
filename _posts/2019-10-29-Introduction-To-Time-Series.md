@@ -5,7 +5,7 @@ tags: Time-Series Forecasting
 ---
 
 ### What is Time Series Forecasting?
-Time Series Forecasting is to try to predict the future based on a sequence of historical events, the historical events are time based that can occur every minute, hourly, daily, weekly, monthly and so on. The aim is to use this historical data to 
+Time Series Forecasting is to try to predict the future based on a sequence of historical events, the historical events are time based that can occur every minute, hourly, daily, weekly, monthly and so on. 
 
 #### Where to start?
 
@@ -57,7 +57,7 @@ Critical Value (10%)          -2.590001e+00
 
 The test statistic value should be less than the critical value at 10%, 5% either 1% for the time series to be considered stationary. If it is test statistic < Critical Value  (5%) value and > Critical Value (1%), then we can say we are 95% sure that we can reject the null hypothesis.
 
-##### Decomposition
+#### Decomposition
 
 Decomposition is a another process to help determine whether the data is stationary or not. Decomposition deconstructs a time series into several components, each representing one of the underlying categories of patterns such as any trends and seasonality. Once it separates out trends and seansonality from the data the remaining data would be free of trends and seasonality. Not only will you get the seasonality of the data but also the trend and residual.
 
@@ -141,7 +141,7 @@ df_moving_avg_diff.dropna(inplace=True) # The first 12 points wont have a value 
 dickey_fuller_test(df_moving_avg_diff.iloc[:,0].values) # Running the Dickey-Fuller test and only passing in the data points and not the time element (date/month/year)
 ```
 
-##### Differencing 
+#### **Differencing**
 
 Here we adjust the current observation by subtracting the previous observation. There are slightly different methods to deal with trends and seasonality. Differencing can be performed a number of times until the dataset becomes stationary. 
 
@@ -166,7 +166,7 @@ new_value = t - (t-n)
 The 't' doesn't have to be the actual data value, we can use log of that value. We could use t.log() instead and this can be for both trend and seasonality.
 
 
-#### Generate ACF and PACF Plots
+#### **Generate ACF and PACF Plots**
 
 **ACF** - Auto Correlation Function 
 **PACF** - Partial Auto Correlation Function 
