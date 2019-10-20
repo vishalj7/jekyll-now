@@ -178,9 +178,10 @@ These are used to help determine appropriate values for q and p respectively whi
 **PACF** - this is a partial correlation coefficients between the time series (t) and lagged versions of itself (t_n) but the correlations between them  t_n-1, t_n-2, t_n-3 can't be used to explained the correlation coefficients for t and t_n. This is used to help determine the value for parameter p to be used either in AR, ARMA models
 
 
-Below is the Behavior of Theoretical ACF and PACF for Stationary Processes
+###### Below is the Behavior of Theoretical ACF and PACF for Stationary Processes
 
 ![an image alt text]({{ site.baseurl }}/images/time_series/acf_pacf_table.png "ACF and PACF plots")
+
 
 Using the table above, you can identity the most appropriate model to use between AR, MA and ARMA. We can find potential parameter vales for that relevant model from the table as we bascially see whether the ACF or PACF plot slowly decays over time or whether it drops to 0.
 
