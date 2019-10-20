@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Time Series Forecasting
-tags: Time-Series Forecasting Decomposition Seasonal
+tags: Time-Series Forecasting  
 ---
 
 ### What is Time Series Forecasting?
