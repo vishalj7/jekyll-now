@@ -56,7 +56,7 @@ Critical Value (10%)          -2.590001e+00
 ```
 
 The test statistic value should be less than the critical value at 10%, 5% either 1% for the time series to be considered stationary. If it is test statistic < Critical Value  (5%) value and > Critical Value (1%), then we can say we are 95% sure that we can reject the null hypothesis.
-
+<br/><br/>
 #### Decomposition
 
 Decomposition is a another process to help determine whether the data is stationary or not. Decomposition deconstructs a time series into several components, each representing one of the underlying categories of patterns such as any trends and seasonality. Once it separates out trends and seansonality from the data the remaining data would be free of trends and seasonality. Not only will you get the seasonality of the data but also the trend and residual.
@@ -108,8 +108,7 @@ On line 4 of the above code section, there is a parameter called model, there ar
 The additive model is useful when the seasonal variation is relatively constant over time and the multiplicative model is useful when the seasonal variation increases over time.
 
 Note - that you can use the residual as the dataset for training the model but it is difficult to apply back the trends and seasonality (that we removed) to the forecasted values.
-
-
+<br/><br/>
 ##### Removing Trends and Seasonality 
 
 If our time series is non-stationary, we will need to remove any trends and seasonality effects before creating our model. There are a few ways in which we can do this and I will go through some of them. For some of the forecasting models e.g ARIMA and SARIMA, removing trends/seasonality is not required to perform manually as it is built in part of the model and the model will be able to deal with the trends/seasonality.
@@ -140,7 +139,7 @@ df_moving_avg_diff.dropna(inplace=True) # The first 12 points wont have a value 
 
 dickey_fuller_test(df_moving_avg_diff.iloc[:,0].values) # Running the Dickey-Fuller test and only passing in the data points and not the time element (date/month/year)
 ```
-
+<br/><br/>
 #### **Differencing**
 
 Here we adjust the current observation by subtracting the previous observation. There are slightly different methods to deal with trends and seasonality. Differencing can be performed a number of times until the dataset becomes stationary. 
@@ -153,7 +152,7 @@ Here you can subtract the previous observation(t-1) from the current observation
 new_value = t - (t-1)
 
 ```
-
+<br/><br/>
 ##### Removing Seasonality 
 
 Here you can subtract the previous cycle (t-n) from the current cycle (t). Notice, here that we are using 'n' instead of 1 as the cycle will be based on your time series intervals and the number of intervals to complete one cycle. For example, if you dataset set contains records on a daily level and the season cycle is one year, then n=365 as there are 365 intervals to complete one cycle. 
@@ -164,8 +163,7 @@ new_value = t - (t-n)
 ```
 
 The 't' doesn't have to be the actual data value, we can use log of that value. We could use t.log() instead and this can be for both trend and seasonality.
-
-
+<br/><br/>
 #### **Generate ACF and PACF Plots**
 
 **ACF** - Auto Correlation Function 
@@ -176,16 +174,14 @@ These are used to help determine appropriate values for q and p respectively whi
 **ACF** - this is a set of correlation coefficients between the time series and lagged versions of itself. This is used to help determine the value for parameter q to be used in AM models.
 
 **PACF** - this is a partial correlation coefficients between the time series (t) and lagged versions of itself (t_n) but the correlations between them  t_n-1, t_n-2, t_n-3 can't be used to explained the correlation coefficients for t and t_n. This is used to help determine the value for parameter p to be used either in AR, ARMA models
-
-
+<br/><br/>
 ###### Below is the Behavior of Theoretical ACF and PACF for Stationary Processes
 
 ![an image alt text]({{ site.baseurl }}/images/time_series/acf_pacf_table.png "ACF and PACF plots")
 
 
 Using the table above, you can identity the most appropriate model to use between AR, MA and ARMA. We can find potential parameter vales for that relevant model from the table as we bascially see whether the ACF or PACF plot slowly decays over time or whether it drops to 0.
-
-
+<br/><br/>
 #### **Choose a Time Series Model**
 
 Next, is to determine which type of model to chose. I will explain a few of them but there are an number of them.
@@ -201,8 +197,7 @@ Next, is to determine which type of model to chose. I will explain a few of them
 **SARIMA** - Just like ARIMA but the 'S' stands for seasonal which allows seasonal differencing.  
 
 **VAR** - Vector Autoregression, this allows multiple features to be part of the model. All the other models mentioned use only one feature the target variable forecasting but VAR allows the target feature plus one or more non-target features for forecasting. 
-
-
+<br/><br/>
 ### In the next post
 
 We will build a number Time Series models using some of the methods mentioned above. 
