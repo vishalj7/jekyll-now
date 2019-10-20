@@ -1,12 +1,13 @@
 ---
 layout: post
-title: Convolutional Neural Network
+title: Understanding how Convolutional Neural Networks work
 tags: Machine-Learning CNN Image-Recognition Convolutional-Neural-Network
 ---
 
 
 ### Convolutional Neural Network
 Convolutional Neural Network is a neural network which is primarily used for classifying images such as determining whether an object exists within the image. They have been used to identify road signs, people's faces and even determining handwriting. CNNs can be used in Natural Language Processing (NLP) and even speech recognition. 
+
 
 #### What is Convolutional Neural Network (CNN)?
 
@@ -31,14 +32,13 @@ A small convolution filter (a small grid) called the kernel moves from the left 
 
 The blue grid is the input image and the green grid that is moving left to right is the kernel and finally the dot product is calculated and then added to the feature map ( the grid on the right). 
 
-This is one step in a 2D operation and realistically the input would be in 3D to include height, width and depth (depth of colour RBG). This is just using one filter to generate a feature map but in practice we will be using lots of different filters to generate lots of feature which are then put together to create the final output of this convolution layer. The depth of the kernel matches the depth of the input image so that everything from the input image is covered. 
+This is one step in a 2D operation and realistically the input would be in 3D to include height, width and depth (depth of colour RBG). This is just using one filter to generate a feature map but in practice we will be using lots of different filters to generate lots of features which are then put together to create the final output of this convolution layer. The depth of the kernel matches the depth of the input image so that everything from the input image is covered. 
 
 
 
 #### Non Linearity (ReLU)
 
-Rectified Linear Unit is considered as part of the convolution step and it is a type of activation function. The reason why we use this relu activation function is to increase non-linearity in the images. Images naturally contain a lot of non-linear features such as colour, borders and when we use pass the image through the convolution stage the image area selected can become linear as we are only working with a very small area and the chances of the same colour being present is high. So using the relu activiation function will increase the non-linearity as it removes all the black elements from it, keeping only those carrying a positive value.  
-
+Rectified Linear Unit is considered as part of the convolution step and it is a type of activation function (another type is  sigmoid and both are non-linear). The primary benefit of ReLU is due to its characteristics in back-propagation and to increase non-linearity in the images. Images naturally contain a lot of non-linear features such as colour, borders and when we pass the image through the convolution stage the pixel area selected, can become linear as we are only working with a very small area and the chances of the same colour being present in this area is high. So using the ReLU activiation function will increase the non-linearity as it removes all the black elements from it, keeping only those carrying a positive value.  
 
 
 #### Stride and Padding 
@@ -47,9 +47,11 @@ This is not really a step but information. The stride is a number that is used t
 
 ![an image alt text]({{ site.baseurl }}/images/cnn_stride.gif "Convolution step - Stride 1 moves across each pixel in the image.")
 
+
 Now increasing the stride size, means less calculations and computation but also a smaller feature map so at each layer the feature map would be getting smaller. 
 
 ![an image alt text]({{ site.baseurl }}/images/cnn_stride2.gif "Convolution step - Stride 2 moves across each pixel in the image.")
+
 
 Padding is used by to keep the feature map (height and width) the same size as the input image by adding 0 values around the input image.  
 
@@ -74,6 +76,7 @@ In this step there are 3 main components:
 + Fully Connected layer
 + Output layer (Classification layer)
 
+
 ![an image alt text]({{ site.baseurl }}/images/cnn_fully_connected.png "Fully Connected layer.")
 
 
@@ -91,9 +94,12 @@ From the above picture each circle is a neuron and each neuron in the previous l
 
 The final layer will contain a number of classifications based on your CNN and the features detected will be passed to this layer. This output layer contains a softmax activation function, which outputs a probability value from 0 to 1 for each of the classification labels the model is trying to predict.
 
+
 ![an image alt text]({{ site.baseurl }}/images/cnn_classification.png "Classification Layer")
 
 
 Below is the full architecture that I talked about above:
 
 ![an image alt text]({{ site.baseurl }}/images/cnn_architecture.jpg "The whole architecture end to end.") 
+
+
