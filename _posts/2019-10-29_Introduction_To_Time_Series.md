@@ -11,15 +11,15 @@ Time Series Forecasting is to try to predict the future based on a sequence of h
 
 The first thing to do is to identify if the data you have is suitable for time series analysis. 
 
-#### Stationary
+##### Stationary
 This is when the mean and variance between data points across the time series are constant and this suggests that there is no trend or seasonality effect that influences the data values. Time series forecasting requires the data to be stationary so that it can be effective and predict accurate results. 
 
 
-#### Non-stationary 
+##### Non-stationary 
 Non-stationary data is when the mean between the data points have different values and the variance between them and across the time frame vary a lot. This indicates that the data is effected by trend and/or seasonality. There are a few tests which can be used to help identify if your data is stationary or non-stationary. Having a unit root in a time series means that there is more than one trend in the series.  
 
 
-#### How to check if the data is Stationary or Non-stationary?
+#### **How to check if the data is Stationary or Non-stationary?**
 
 ##### Visual tests
 
@@ -63,12 +63,12 @@ Decomposition is a another process to help determine whether the data is station
 
 It uses a number of algorithms to detect and separate out trends and seasonality. 
 
-Step 1 – Remove the Mean
-Step 2 – Calculates a Moving Average
-Step 3 – Calculates the Trend
-Step 4 – Calculates the Cycle
-Step 5 – Calculates the Seasonality
-Step 6 – Calculates the Randomness
++ Step 1 – Remove the Mean
++ Step 2 – Calculates a Moving Average
++ Step 3 – Calculates the Trend
++ Step 4 – Calculates the Cycle
++ Step 5 – Calculates the Seasonality
++ Step 6 – Calculates the Randomness
 
 ``` python
 from statsmodels.tsa.seasonal import seasonal_decompose
@@ -98,7 +98,7 @@ plt.show()
 
 ```
 
-![an image alt text]({{ site.baseurl }}/images/time_series "decomposition.png")
+![an image alt text]({{ site.baseurl }}/images/time_series/decomposition.png "Decomposition Plot")
 
 This will generate a plot with 4 sections, the top containing the original data, then the 'Trend', then 'Seasonality' and finally the 'Residual'.
 
@@ -110,7 +110,7 @@ The additive model is useful when the seasonal variation is relatively constant 
 Note - that you can use the residual as the dataset for training the model but it is difficult to apply back the trends and seasonality (that we removed) to the forecasted values.
 
 
-#### Removing Trends and Seasonality 
+##### Removing Trends and Seasonality 
 
 If our time series is non-stationary, we will need to remove any trends and seasonality effects before creating our model. There are a few ways in which we can do this and I will go through some of them. For some of the forecasting models e.g ARIMA and SARIMA, removing trends/seasonality is not required to perform manually as it is built in part of the model and the model will be able to deal with the trends/seasonality.
 
@@ -130,7 +130,7 @@ plt.plot(moving_avg, color='red')
 display(fig)
 ```
 
-![an image alt text]({{ site.baseurl }}/images/time_series ".png")
+![an image alt text]({{ site.baseurl }}/images/time_series/rolling_mean.png "Rolling Mean")
 
 ``` python
 df_moving_avg_diff = df - moving_avg
@@ -168,41 +168,41 @@ The 't' doesn't have to be the actual data value, we can use log of that value. 
 
 #### Generate ACF and PACF Plots
 
-ACF - Auto Correlation Function 
-PACF - Partial Auto Correlation Function 
+**ACF** - Auto Correlation Function 
+**PACF** - Partial Auto Correlation Function 
 
 These are used to help determine appropriate values for q and p respectively which are then used in model parameters. 
 
-ACF - this is a set of correlation coefficients between the time series and lagged versions of itself. This is used to help determine the value for parameter q to be used in AM models. of an MA(q) process is zero at lag q + 1 and greater. Therefore, we determine the appropriate maximum lag for the estimation by examining the sample autocorrelation function to see where it becomes insignificantly different from zero for all lags beyond a certain lag, which is designated as the maximum lag q.[1]
+**ACF** - this is a set of correlation coefficients between the time series and lagged versions of itself. This is used to help determine the value for parameter q to be used in AM models.
 
-PACF - this is a partial correlation coefficients between the time series (t) and lagged versions of itself (t_n) but the correlations between them  t_n-1, t_n-2, t_n-3 can't be used to explained the correlation coefficients for t and t_n. This is used to help determine the value for parameter p to be used either in AR, ARMA models
+**PACF** - this is a partial correlation coefficients between the time series (t) and lagged versions of itself (t_n) but the correlations between them  t_n-1, t_n-2, t_n-3 can't be used to explained the correlation coefficients for t and t_n. This is used to help determine the value for parameter p to be used either in AR, ARMA models
 
 
 Below is the Behavior of Theoretical ACF and PACF for Stationary Processes
 
-![an image alt text]({{ site.baseurl }}/images/time_series "acf_pacf_table.png")
+![an image alt text]({{ site.baseurl }}/images/time_series/acf_pacf_table.png "ACF and PACF plots")
 
 Using the table above, you can identity the most appropriate model to use between AR, MA and ARMA. We can find potential parameter vales for that relevant model from the table as we bascially see whether the ACF or PACF plot slowly decays over time or whether it drops to 0.
 
 
-#### Choose a Time Series Model
+#### **Choose a Time Series Model**
 
 Next, is to determine which type of model to chose. I will explain a few of them but there are an number of them.
 
-AR - Autoregression, this is where we predict future values based on a linear combination of input values. These input values are past values which is used to predict future     values, this is the regression of self.
+**AR** - Autoregression, this is where we predict future values based on a linear combination of input values. These input values are past values which is used to predict future     values, this is the regression of self.
 
-MA - Moving Average, this uses past forecast errors in a regression-like model. This is different from moving average method to remove trends/seasonality.
+**MA** - Moving Average, this uses past forecast errors in a regression-like model. This is different from moving average method to remove trends/seasonality.
 
-ARMA - a (weakly) stationary stochastic process in terms of two polynomials, one for the autoregression (AR) and the second for the moving average (MA). The AR part involves regressing the variable on its own lagged (i.e., past) values. The MA part involves modeling the error term as a linear combination of error terms occurring contemporaneously and at various times in the past. 
+**ARMA** - a (weakly) stationary stochastic process in terms of two polynomials, one for the autoregression (AR) and the second for the moving average (MA). The AR part involves regressing the variable on its own lagged (i.e., past) values. The MA part involves modeling the error term as a linear combination of error terms occurring contemporaneously and at various times in the past. 
 
-ARIMA - This is just like ARMA but the 'I' stands for intergated which allows differencing to be applied to the data which may be non-stationary. The 'I' can be implemented more than once to make the dataset stationary. 
+**ARIMA** - This is just like ARMA but the 'I' stands for intergated which allows differencing to be applied to the data which may be non-stationary. The 'I' can be implemented more than once to make the dataset stationary. 
 
-SARIMA - Just like ARIMA but the 'S' stands for seasonal which allows seasonal differencing.  
+**SARIMA** - Just like ARIMA but the 'S' stands for seasonal which allows seasonal differencing.  
 
-VAR - Vector Autoregression, this allows multiple features to be part of the model. All the other models mentioned use only one feature the target variable forecasting but VAR allows the target feature plus one or more non-target features for forecasting. 
+**VAR** - Vector Autoregression, this allows multiple features to be part of the model. All the other models mentioned use only one feature the target variable forecasting but VAR allows the target feature plus one or more non-target features for forecasting. 
 
 
-#### In the next post
+### In the next post
 
 We will build a number Time Series models using some of the methods mentioned above. 
 
