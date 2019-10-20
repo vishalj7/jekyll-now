@@ -28,7 +28,7 @@ There are 4 steps within CNN :
 A small convolution filter (a small grid) called the kernel moves from the left to the right of the image moving across the pixels in the image. The moves depend on the number of strides that can be set which I will talk about in the next section. The kernel fits over a number of pixels and this grid can be defined and the dot product of the input values (number from all the pixels that the kernel fits over) is calculated. This calculation is then added to a feature map. Once the feature map is completed then we can move on to another filter using the same process. A kernel has a specific height and width, like 3x3 or 5x5, and by design it covers the entire depth of its input so it needs to be 3D as well.
 
 
-![an image alt text]({{ site.baseurl }}/images/cnn_kernal.gif "Convolution step - How the Kernel moves across each pixel in the image.")
+![an image alt text]({{ site.baseurl }}/images/cnn/cnn_kernal.gif "Convolution step - How the Kernel moves across each pixel in the image.")
 
 The blue grid is the input image and the green grid that is moving left to right is the kernel and finally the dot product is calculated and then added to the feature map ( the grid on the right). 
 
@@ -45,17 +45,17 @@ Rectified Linear Unit is considered as part of the convolution step and it is a 
 
 This is not really a step but information. The stride is a number that is used to specifiy how many pixels for the kernal to move by when the it finishes the calculations on the current set of pixels. The default is 1 and this usually involves the kernel overlapping and covering some pixels more than others. 
 
-![an image alt text]({{ site.baseurl }}/images/cnn_stride.gif "Convolution step - Stride 1 moves across each pixel in the image.")
+![an image alt text]({{ site.baseurl }}/images/cnn/cnn_stride.gif "Convolution step - Stride 1 moves across each pixel in the image.")
 
 
 Now increasing the stride size, means less calculations and computation but also a smaller feature map so at each layer the feature map would be getting smaller. 
 
-![an image alt text]({{ site.baseurl }}/images/cnn_stride2.gif "Convolution step - Stride 2 moves across each pixel in the image.")
+![an image alt text]({{ site.baseurl }}/images/cnn/cnn_stride2.gif "Convolution step - Stride 2 moves across each pixel in the image.")
 
 
 Padding is used by to keep the feature map (height and width) the same size as the input image by adding 0 values around the input image.  
 
-![an image alt text]({{ site.baseurl }}/images/cnn_padding.gif "Convolution step - Padding allows the feature map to remain the same size.")
+![an image alt text]({{ site.baseurl }}/images/cnn/cnn_padding.gif "Convolution step - Padding allows the feature map to remain the same size.")
 
 
 
@@ -77,7 +77,7 @@ In this step there are 3 main components:
 + Output layer (Classification layer)
 
 
-![an image alt text]({{ site.baseurl }}/images/cnn_fully_connected.png "Fully Connected layer.")
+![an image alt text]({{ site.baseurl }}/images/cnn/cnn_fully_connected.png "Fully Connected layer.")
 
 
 #### Input layer
@@ -95,11 +95,11 @@ From the above picture each circle is a neuron and each neuron in the previous l
 The final layer will contain a number of classifications based on your CNN and the features detected will be passed to this layer. This output layer contains a softmax activation function, which outputs a probability value from 0 to 1 for each of the classification labels the model is trying to predict.
 
 
-![an image alt text]({{ site.baseurl }}/images/cnn_classification.png "Classification Layer")
+![an image alt text]({{ site.baseurl }}/images/cnn/cnn_classification.png "Classification Layer")
 
 
 Below is the full architecture that I talked about above:
 
-![an image alt text]({{ site.baseurl }}/images/cnn_architecture.jpg "The whole architecture end to end.") 
+![an image alt text]({{ site.baseurl }}/images/cnn/cnn_architecture.jpg "The whole architecture end to end.") 
 
 
