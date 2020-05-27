@@ -171,7 +171,7 @@ The 't' doesn't have to be the actual data value, we can use log of that value. 
 
 These are used to help determine appropriate values for q and p respectively which are then used in model parameters. 
 
-**ACF** - this is a set of correlation coefficients between the time series and lagged versions of itself. This is used to help determine the value for parameter q to be used in AM models.
+**ACF** - this is a set of correlation coefficients between the time series and lagged versions of itself. This is used to help determine the value for parameter q to be used in MA models.
 
 **PACF** - this is a partial correlation coefficients between the time series (t) and lagged versions of itself (t_n) but the correlations between them  t_n-1, t_n-2, t_n-3 can't be used to explained the correlation coefficients for t and t_n. This is used to help determine the value for parameter p to be used either in AR, ARMA models
 <br/><br/>
