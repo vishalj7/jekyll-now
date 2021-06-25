@@ -4,10 +4,6 @@ title: Neuron Activation in Artificial Neural Networks
 tags: Neuron Activation-Function Artificial-Neural-Networks
 ---
 
-##### This post will be a series of post to cover important concepts of a Neural Network such as Gradient Descent, Classification, Backpropagation. 
-
-<br/><br/>
-
 ### Artificial Neural Networks and Neurons?
 
 A artificial neural network (ANNs) is network of neurons which are interconnected between layers. The very first layer is the input layer and the very last layer is the output layer; this output layer classifies our input using the information passed from all the layers before it. There can be x number of layers between the first and last and these are called hidden layers.
@@ -80,7 +76,7 @@ Once the activation value is passed through the function, this scaled number is 
 
 #### Next Post
 
-We will continue our journey into the details of Neural Networks with another post about Gradient Descent so look out for that post. 
+This post will be a series of post to cover important concepts of a Neural Network such as Gradient Descent, Classification, Backpropagation. 
 
 
 
