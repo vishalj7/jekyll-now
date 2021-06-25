@@ -4,9 +4,10 @@ title: Neuron Activation in Artificial Neural Networks
 tags: Neuron Activation-Function Artificial-Neural-Networks
 ---
 
-### Artificial Neural Networks?
 
+### Artificial Neural Networks?
 A artificial neural network (ANNs) is network of neurons which are interconnected between layers. 
+
 
 
 #### Artificial Neural Networks Structure
