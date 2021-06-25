@@ -4,9 +4,13 @@ title: Neuron Activation in Artificial Neural Networks
 tags: Neuron Activation-Function Artificial-Neural-Networks
 ---
 
-### Artificial Neural Networks and Neurons?
+### Artificial Neural Networks?
 
-A artificial neural network (ANNs) is network of neurons which are interconnected between layers. The very first layer is the input layer and the very last layer is the output layer; this output layer classifies our input using the information passed from all the layers before it. There can be x number of layers between the first and last and these are called hidden layers.
+A artificial neural network (ANNs) is network of neurons which are interconnected between layers. 
+
+
+#### Artificial Neural Networks Structure
+The very first layer is the input layer and the very last layer is the output layer; this output layer classifies our input using the information passed from all the layers before it. There can be x number of layers between the first and last and these are called hidden layers.
 
 Between two layers, each neuron is connected to every other neuron which enables information to be passed between the layers. A neuron receives information in form of a number and it processes it before passing it to another neuron in the next layer, only if certain conditions are met (which we will go through later). This the network is based on the network of neurons found in the human brain. 
 <br/><br/>
