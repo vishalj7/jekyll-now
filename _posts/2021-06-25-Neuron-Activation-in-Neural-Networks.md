@@ -5,9 +5,8 @@ tags: Neuron Activation-Function Artificial-Neural-Networks
 ---
 
 
-### Artificial Neural Networks?
+### Artificial Neural Networks (ANNs)
 A artificial neural network (ANNs) is network of neurons which are interconnected between layers. 
-
 
 
 #### Artificial Neural Networks Structure
@@ -82,8 +81,5 @@ Once the activation value is passed through the function, this scaled number is 
 #### Next Post
 
 This post will be a series of post to cover important concepts of a Neural Network such as Gradient Descent, Classification, Backpropagation. 
-
-
-
 
 
